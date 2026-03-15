@@ -35,7 +35,7 @@ public class JuegoUno {
                 turnoJugador();
 
                 if (jugador.sinCartas()) {
-                    System.out.println("¡Ganaste!");
+                    System.out.println("¡Ganaste eres un perro!");
                     break;
                 }
 
