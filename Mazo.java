@@ -24,7 +24,7 @@ public class Mazo {
             cartas.add(new Carta(color,Carta.Tipo.ROBA2));
         }
         //llenar cartas especiales
-        for(int i = 0;i < 4; ){
+        for(int i = 0;i < 4; i++ ){
             cartas.add(new Carta("negra",Carta.Tipo.COMODIN));
             cartas.add(new Carta("negro",Carta.Tipo.ROBA4));
         }
