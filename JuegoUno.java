@@ -83,7 +83,7 @@ public class JuegoUno {
                 System.out.println("Error: debes ingresar un número.");
             } catch (IndexOutOfBoundsException e) {
                 System.out.println("Error: " + e.getMessage());
-            } catch (CartaInvalidaException e) {
+            } catch (CartaInvalidaExcep e) {
                 System.out.println("Movimiento inválido: " + e.getMessage());
             }
         }
@@ -221,10 +221,10 @@ public class JuegoUno {
         return opcion;
     }
 
-    private Carta obtenerCartaValida(int opcion) throws CartaInvalidaException {
+    private Carta obtenerCartaValida(int opcion) throws CartaInvalidaExcep {
         Carta seleccionada = jugador.getMano().get(opcion);
         if (!seleccionada.esValida(cartaMesa)) {
-            throw new CartaInvalidaException(
+            throw new CartaInvalidaExcep(
                 "La carta " + seleccionada + " no coincide con " + cartaMesa
             );
         }
