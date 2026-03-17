@@ -23,7 +23,7 @@ public class JuegoUno {
         //esto nos va a segurar que la carta inicial no sea especial
         do {
             cartaMesa = mazo.robar();
-        }    while (xartaMesa != null && cartaMesa.getTipo() != Carta.Tipo.NUMERO);
+        }    while (cartaMesa != null && cartaMesa.getTipo() != Carta.Tipo.NUMERO);
 
         System.out.println("Carta inicial: " + cartaMesa);
         bucleJuego();
@@ -35,7 +35,8 @@ public class JuegoUno {
             jugador.robarCarta(mazo);
             cpu.robarCarta(mazo);
         }
-
+    }
+        
     private void bucleJuego() {
         while (true) {
             if (turnoJugador) {
