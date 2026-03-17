@@ -38,10 +38,14 @@ public class Carta {
 
     public boolean esValida(Carta cartaMesa) {
         return this.color.equals(cartaMesa.color) ||
-               this.numero == cartaMesa.numero;
+               this.numero == cartaMesa.numero ||
+               this.tipo == Tipo.COMODIN ||
+               this.tipo == Tipo.ROBA4;
     }
     @Override
     public String toString() {
-        return color + " " + numero + " " + tipo;
+        if(tipo == Tipo.NUMERO)
+            return color + " " + numero;
+        return color + " " + tipo;
     }
 }
